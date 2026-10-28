@@ -1,0 +1,1060 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Morgan",
+      "email": "alice@acme.test",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "name": "Bob Chen",
+      "email": "bob@acme.test",
+      "password": "password123"
+    },
+    {
+      "id": 3,
+      "name": "Carol Diaz",
+      "email": "carol@acme.test",
+      "password": "password123"
+    },
+    {
+      "id": 4,
+      "name": "Dave Patel",
+      "email": "dave@acme.test",
+      "password": "password123"
+    },
+    {
+      "id": 5,
+      "name": "Erin Walsh",
+      "email": "erin@acme.test",
+      "password": "password123"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": 1,
+      "name": "Acme Cloud",
+      "slug": "acme-cloud",
+      "description": "Cloud storage and sync for distributed teams.",
+      "logoUrl": "",
+      "brandColor": "#0f766e",
+      "publicRoadmap": true,
+      "ownerId": 1,
+      "createdAt": "2026-06-24T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "name": "Nimbus Notes",
+      "slug": "nimbus-notes",
+      "description": "A fast note-taking app for students and researchers.",
+      "logoUrl": "",
+      "brandColor": "#7c3aed",
+      "publicRoadmap": true,
+      "ownerId": 4,
+      "createdAt": "2026-07-24T10:00:00.000Z"
+    }
+  ],
+  "workspaceMembers": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "userId": 1,
+      "role": "owner",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "userId": 2,
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "userId": 3,
+      "role": "pm",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "userId": 4,
+      "role": "customer",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "userId": 5,
+      "role": "customer",
+      "status": "invited"
+    },
+    {
+      "id": 6,
+      "workspaceId": 2,
+      "userId": 4,
+      "role": "owner",
+      "status": "active"
+    },
+    {
+      "id": 7,
+      "workspaceId": 2,
+      "userId": 5,
+      "role": "admin",
+      "status": "active"
+    },
+    {
+      "id": 8,
+      "workspaceId": 2,
+      "userId": 3,
+      "role": "pm",
+      "status": "active"
+    },
+    {
+      "id": 9,
+      "workspaceId": 2,
+      "userId": 1,
+      "role": "customer",
+      "status": "active"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "name": "Integrations",
+      "color": "#2563eb"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "name": "Performance",
+      "color": "#d97706"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "name": "UI/UX",
+      "color": "#7c3aed"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "name": "Billing",
+      "color": "#059669"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "name": "Security",
+      "color": "#dc2626"
+    },
+    {
+      "id": 6,
+      "workspaceId": 2,
+      "name": "Editor",
+      "color": "#7c3aed"
+    },
+    {
+      "id": 7,
+      "workspaceId": 2,
+      "name": "Sync",
+      "color": "#2563eb"
+    },
+    {
+      "id": 8,
+      "workspaceId": 2,
+      "name": "Mobile",
+      "color": "#059669"
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "name": "bug"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "name": "enhancement"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "name": "mobile"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "name": "api"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "name": "quick-win"
+    },
+    {
+      "id": 6,
+      "workspaceId": 2,
+      "name": "bug"
+    },
+    {
+      "id": 7,
+      "workspaceId": 2,
+      "name": "enhancement"
+    },
+    {
+      "id": 8,
+      "workspaceId": 2,
+      "name": "offline"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "title": "Slack integration for new feedback",
+      "description": "Post a message to a Slack channel whenever a new request arrives so the team can react quickly.",
+      "categoryId": 1,
+      "submitterId": 4,
+      "tagIds": [
+        2,
+        4
+      ],
+      "priority": "high",
+      "status": "planned",
+      "createdAt": "2026-08-25T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "title": "Dark mode",
+      "description": "The bright interface is hard to use at night. Please add a dark theme that follows the system setting.",
+      "categoryId": 3,
+      "submitterId": 5,
+      "tagIds": [
+        2
+      ],
+      "priority": "medium",
+      "status": "in_progress",
+      "createdAt": "2026-08-29T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "title": "Faster dashboard load for large workspaces",
+      "description": "Loading the dashboard takes more than ten seconds once we pass a few thousand files.",
+      "categoryId": 2,
+      "submitterId": 4,
+      "tagIds": [
+        1
+      ],
+      "priority": "high",
+      "status": "under_review",
+      "createdAt": "2026-09-03T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "title": "CSV export of feedback",
+      "description": "We need to export all requests with votes to CSV for our quarterly planning.",
+      "categoryId": 1,
+      "submitterId": 5,
+      "tagIds": [
+        2,
+        4
+      ],
+      "priority": "medium",
+      "status": "planned",
+      "createdAt": "2026-09-08T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "title": "SSO with Google Workspace",
+      "description": "Our security team requires single sign-on before we can roll this out company-wide.",
+      "categoryId": 5,
+      "submitterId": 4,
+      "tagIds": [
+        2
+      ],
+      "priority": "critical",
+      "status": "planned",
+      "createdAt": "2026-09-12T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 6,
+      "workspaceId": 1,
+      "title": "Download invoices as PDF",
+      "description": "Finance asks for PDF invoices for each billing period.",
+      "categoryId": 4,
+      "submitterId": 5,
+      "tagIds": [
+        2,
+        5
+      ],
+      "priority": "low",
+      "status": "completed",
+      "createdAt": "2026-09-16T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 7,
+      "workspaceId": 1,
+      "title": "Mobile push notifications",
+      "description": "Notify me on my phone when a request I voted for changes status.",
+      "categoryId": 3,
+      "submitterId": 4,
+      "tagIds": [
+        2,
+        3
+      ],
+      "priority": "medium",
+      "status": "open",
+      "createdAt": "2026-09-22T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 8,
+      "workspaceId": 1,
+      "title": "Bulk edit feedback status",
+      "description": "Let product managers select several requests and change their status in one go.",
+      "categoryId": 3,
+      "submitterId": 5,
+      "tagIds": [
+        2,
+        5
+      ],
+      "priority": "medium",
+      "status": "under_review",
+      "createdAt": "2026-09-26T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 9,
+      "workspaceId": 1,
+      "title": "Two-factor authentication",
+      "description": "Add an authenticator app option for extra account protection.",
+      "categoryId": 5,
+      "submitterId": 4,
+      "tagIds": [
+        2
+      ],
+      "priority": "high",
+      "status": "in_progress",
+      "createdAt": "2026-10-01T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 10,
+      "workspaceId": 1,
+      "title": "Export to CSV please",
+      "description": "Would love a way to download everything as a spreadsheet.",
+      "categoryId": 1,
+      "submitterId": 4,
+      "tagIds": [],
+      "priority": "low",
+      "status": "open",
+      "createdAt": "2026-10-05T10:00:00.000Z",
+      "duplicateOfId": 4
+    },
+    {
+      "id": 11,
+      "workspaceId": 1,
+      "title": "Slack notifications",
+      "description": "Send alerts into our Slack workspace.",
+      "categoryId": 1,
+      "submitterId": 5,
+      "tagIds": [
+        4
+      ],
+      "priority": "medium",
+      "status": "open",
+      "createdAt": "2026-10-10T10:00:00.000Z",
+      "duplicateOfId": 1
+    },
+    {
+      "id": 12,
+      "workspaceId": 1,
+      "title": "Search is slow on the feedback list",
+      "description": "Typing in the search box lags when there are lots of requests.",
+      "categoryId": 2,
+      "submitterId": 4,
+      "tagIds": [
+        1,
+        5
+      ],
+      "priority": "medium",
+      "status": "open",
+      "createdAt": "2026-10-16T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 13,
+      "workspaceId": 2,
+      "title": "Markdown tables in the editor",
+      "description": "Tables are painful to write by hand. Add a table helper in the toolbar.",
+      "categoryId": 6,
+      "submitterId": 5,
+      "tagIds": [
+        7
+      ],
+      "priority": "medium",
+      "status": "planned",
+      "createdAt": "2026-09-19T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 14,
+      "workspaceId": 2,
+      "title": "Offline mode on mobile",
+      "description": "I lose notes when the connection drops on the train.",
+      "categoryId": 8,
+      "submitterId": 1,
+      "tagIds": [
+        8,
+        6
+      ],
+      "priority": "high",
+      "status": "in_progress",
+      "createdAt": "2026-09-24T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 15,
+      "workspaceId": 2,
+      "title": "Sync conflicts overwrite my edits",
+      "description": "Editing the same note on two devices sometimes loses changes.",
+      "categoryId": 7,
+      "submitterId": 5,
+      "tagIds": [
+        6
+      ],
+      "priority": "critical",
+      "status": "under_review",
+      "createdAt": "2026-10-02T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 16,
+      "workspaceId": 2,
+      "title": "Folder colours",
+      "description": "Let me colour folders to find them quickly.",
+      "categoryId": 6,
+      "submitterId": 1,
+      "tagIds": [
+        7
+      ],
+      "priority": "low",
+      "status": "open",
+      "createdAt": "2026-10-11T10:00:00.000Z",
+      "duplicateOfId": null
+    },
+    {
+      "id": 17,
+      "workspaceId": 2,
+      "title": "Export notes as PDF",
+      "description": "Export a notebook to PDF for sharing with my study group.",
+      "categoryId": 6,
+      "submitterId": 5,
+      "tagIds": [
+        7
+      ],
+      "priority": "medium",
+      "status": "completed",
+      "createdAt": "2026-08-23T10:00:00.000Z",
+      "duplicateOfId": null
+    }
+  ],
+  "votes": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 4
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 5
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "feedbackId": 3,
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "workspaceId": 1,
+      "feedbackId": 3,
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "workspaceId": 1,
+      "feedbackId": 3,
+      "userId": 4
+    },
+    {
+      "id": 8,
+      "workspaceId": 1,
+      "feedbackId": 3,
+      "userId": 5
+    },
+    {
+      "id": 9,
+      "workspaceId": 1,
+      "feedbackId": 4,
+      "userId": 1
+    },
+    {
+      "id": 10,
+      "workspaceId": 1,
+      "feedbackId": 4,
+      "userId": 2
+    },
+    {
+      "id": 11,
+      "workspaceId": 1,
+      "feedbackId": 4,
+      "userId": 4
+    },
+    {
+      "id": 12,
+      "workspaceId": 1,
+      "feedbackId": 4,
+      "userId": 5
+    },
+    {
+      "id": 13,
+      "workspaceId": 1,
+      "feedbackId": 6,
+      "userId": 1
+    },
+    {
+      "id": 14,
+      "workspaceId": 1,
+      "feedbackId": 6,
+      "userId": 2
+    },
+    {
+      "id": 15,
+      "workspaceId": 1,
+      "feedbackId": 6,
+      "userId": 4
+    },
+    {
+      "id": 16,
+      "workspaceId": 1,
+      "feedbackId": 6,
+      "userId": 5
+    },
+    {
+      "id": 17,
+      "workspaceId": 1,
+      "feedbackId": 7,
+      "userId": 1
+    },
+    {
+      "id": 18,
+      "workspaceId": 1,
+      "feedbackId": 7,
+      "userId": 2
+    },
+    {
+      "id": 19,
+      "workspaceId": 1,
+      "feedbackId": 7,
+      "userId": 4
+    },
+    {
+      "id": 20,
+      "workspaceId": 1,
+      "feedbackId": 7,
+      "userId": 5
+    },
+    {
+      "id": 21,
+      "workspaceId": 1,
+      "feedbackId": 9,
+      "userId": 1
+    },
+    {
+      "id": 22,
+      "workspaceId": 1,
+      "feedbackId": 9,
+      "userId": 2
+    },
+    {
+      "id": 23,
+      "workspaceId": 1,
+      "feedbackId": 9,
+      "userId": 4
+    },
+    {
+      "id": 24,
+      "workspaceId": 1,
+      "feedbackId": 9,
+      "userId": 5
+    },
+    {
+      "id": 25,
+      "workspaceId": 1,
+      "feedbackId": 10,
+      "userId": 1
+    },
+    {
+      "id": 26,
+      "workspaceId": 1,
+      "feedbackId": 10,
+      "userId": 2
+    },
+    {
+      "id": 27,
+      "workspaceId": 1,
+      "feedbackId": 12,
+      "userId": 1
+    },
+    {
+      "id": 28,
+      "workspaceId": 1,
+      "feedbackId": 12,
+      "userId": 2
+    },
+    {
+      "id": 29,
+      "workspaceId": 1,
+      "feedbackId": 12,
+      "userId": 4
+    },
+    {
+      "id": 30,
+      "workspaceId": 1,
+      "feedbackId": 12,
+      "userId": 5
+    },
+    {
+      "id": 31,
+      "workspaceId": 2,
+      "feedbackId": 13,
+      "userId": 1
+    },
+    {
+      "id": 32,
+      "workspaceId": 2,
+      "feedbackId": 13,
+      "userId": 4
+    },
+    {
+      "id": 33,
+      "workspaceId": 2,
+      "feedbackId": 13,
+      "userId": 5
+    },
+    {
+      "id": 34,
+      "workspaceId": 2,
+      "feedbackId": 15,
+      "userId": 1
+    },
+    {
+      "id": 35,
+      "workspaceId": 2,
+      "feedbackId": 15,
+      "userId": 4
+    },
+    {
+      "id": 36,
+      "workspaceId": 2,
+      "feedbackId": 15,
+      "userId": 5
+    },
+    {
+      "id": 37,
+      "workspaceId": 2,
+      "feedbackId": 16,
+      "userId": 1
+    },
+    {
+      "id": 38,
+      "workspaceId": 2,
+      "feedbackId": 16,
+      "userId": 4
+    },
+    {
+      "id": 39,
+      "workspaceId": 2,
+      "feedbackId": 16,
+      "userId": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 4,
+      "body": "This would save us a lot of context switching.",
+      "createdAt": "2026-09-02T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "feedbackId": 1,
+      "userId": 3,
+      "body": "Planned for next quarter. Do you need threads or just a channel post?",
+      "createdAt": "2026-09-05T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "feedbackId": 2,
+      "userId": 5,
+      "body": "Please make it follow the OS setting.",
+      "createdAt": "2026-08-31T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "feedbackId": 3,
+      "userId": 2,
+      "body": "We are profiling this now.",
+      "createdAt": "2026-09-07T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "feedbackId": 5,
+      "userId": 3,
+      "body": "Google first, then Microsoft.",
+      "createdAt": "2026-09-14T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "workspaceId": 1,
+      "feedbackId": 9,
+      "userId": 1,
+      "body": "Authenticator app support is in progress.",
+      "createdAt": "2026-10-07T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "workspaceId": 2,
+      "feedbackId": 14,
+      "userId": 3,
+      "body": "Starting with iOS, Android follows.",
+      "createdAt": "2026-09-27T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "workspaceId": 2,
+      "feedbackId": 15,
+      "userId": 5,
+      "body": "This happened to me twice last week.",
+      "createdAt": "2026-10-04T10:00:00.000Z"
+    }
+  ],
+  "roadmapItems": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "title": "Slack integration",
+      "description": "Send new feedback and status changes to a Slack channel.",
+      "stage": "planned",
+      "published": true,
+      "feedbackIds": [
+        1,
+        11
+      ],
+      "createdAt": "2026-09-22T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "title": "Dark mode",
+      "description": "A dark theme that follows the system setting.",
+      "stage": "in_progress",
+      "published": true,
+      "feedbackIds": [
+        2
+      ],
+      "createdAt": "2026-09-24T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "title": "Dashboard performance",
+      "description": "Faster loading for workspaces with large file counts.",
+      "stage": "under_review",
+      "published": true,
+      "feedbackIds": [
+        3
+      ],
+      "createdAt": "2026-09-27T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "title": "Google SSO",
+      "description": "Single sign-on with Google Workspace.",
+      "stage": "planned",
+      "published": true,
+      "feedbackIds": [
+        5
+      ],
+      "createdAt": "2026-09-30T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "title": "Invoice PDF download",
+      "description": "Download invoices for each billing period as PDF.",
+      "stage": "completed",
+      "published": true,
+      "feedbackIds": [
+        6
+      ],
+      "createdAt": "2026-10-02T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "workspaceId": 1,
+      "title": "Two-factor authentication",
+      "description": "Authenticator app support for stronger account security.",
+      "stage": "in_progress",
+      "published": true,
+      "feedbackIds": [
+        9
+      ],
+      "createdAt": "2026-10-08T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "workspaceId": 1,
+      "title": "Bulk actions for feedback",
+      "description": "Change the status of several requests at once.",
+      "stage": "under_review",
+      "published": false,
+      "feedbackIds": [
+        8
+      ],
+      "createdAt": "2026-10-12T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "workspaceId": 1,
+      "title": "CSV export",
+      "description": "Export feedback and votes to CSV.",
+      "stage": "planned",
+      "published": true,
+      "feedbackIds": [
+        4,
+        10
+      ],
+      "createdAt": "2026-10-14T10:00:00.000Z"
+    },
+    {
+      "id": 9,
+      "workspaceId": 2,
+      "title": "Markdown tables",
+      "description": "A table helper in the editor toolbar.",
+      "stage": "planned",
+      "published": true,
+      "feedbackIds": [
+        13
+      ],
+      "createdAt": "2026-10-02T10:00:00.000Z"
+    },
+    {
+      "id": 10,
+      "workspaceId": 2,
+      "title": "Offline mobile editing",
+      "description": "Keep working without a connection and sync later.",
+      "stage": "in_progress",
+      "published": true,
+      "feedbackIds": [
+        14
+      ],
+      "createdAt": "2026-10-04T10:00:00.000Z"
+    },
+    {
+      "id": 11,
+      "workspaceId": 2,
+      "title": "PDF export",
+      "description": "Export notebooks to PDF.",
+      "stage": "completed",
+      "published": true,
+      "feedbackIds": [
+        17
+      ],
+      "createdAt": "2026-09-12T10:00:00.000Z"
+    }
+  ],
+  "releaseNotes": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "version": "1.4.0",
+      "releaseDate": "2026-10-08",
+      "summary": "Invoices can now be downloaded as PDF from the billing page. We also fixed several sync delays reported by customers.",
+      "status": "published",
+      "roadmapItemIds": [
+        5
+      ]
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "version": "1.5.0",
+      "releaseDate": "2026-11-05",
+      "summary": "Draft: dark mode and two-factor authentication.",
+      "status": "draft",
+      "roadmapItemIds": []
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "version": "1.3.0",
+      "releaseDate": "2026-08-20",
+      "summary": "Improved file preview and faster uploads for large folders.",
+      "status": "archived",
+      "roadmapItemIds": []
+    },
+    {
+      "id": 4,
+      "workspaceId": 2,
+      "version": "2.1.0",
+      "releaseDate": "2026-09-30",
+      "summary": "Notebooks can be exported to PDF and shared with your study group.",
+      "status": "published",
+      "roadmapItemIds": [
+        11
+      ]
+    }
+  ],
+  "subscriptionPlans": [
+    {
+      "id": "free",
+      "name": "Free",
+      "price": 0,
+      "memberLimit": 6,
+      "feedbackLimit": 25,
+      "roadmapLimit": 10,
+      "features": [
+        "Up to 6 team members",
+        "Up to 25 feedback items",
+        "Up to 10 roadmap items",
+        "Public roadmap"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro",
+      "price": 49,
+      "memberLimit": 50,
+      "feedbackLimit": 1000,
+      "roadmapLimit": 200,
+      "features": [
+        "Up to 50 team members",
+        "Up to 1,000 feedback items",
+        "Up to 200 roadmap items",
+        "Public roadmap",
+        "Priority support"
+      ]
+    }
+  ],
+  "workspaceSubscriptions": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "planId": "free",
+      "updatedAt": "2026-07-14T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "workspaceId": 2,
+      "planId": "pro",
+      "updatedAt": "2026-08-03T10:00:00.000Z"
+    }
+  ],
+  "activityLogs": [
+    {
+      "id": 1,
+      "workspaceId": 1,
+      "userId": 1,
+      "action": "created the workspace",
+      "createdAt": "2026-06-24T10:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "workspaceId": 1,
+      "userId": 4,
+      "action": "submitted feedback “Slack integration for new feedback”",
+      "createdAt": "2026-08-25T10:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "workspaceId": 1,
+      "userId": 3,
+      "action": "moved “Dark mode” to In progress",
+      "createdAt": "2026-09-24T10:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "workspaceId": 1,
+      "userId": 3,
+      "action": "Published release v1.4.0",
+      "createdAt": "2026-10-08T10:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "workspaceId": 1,
+      "userId": 2,
+      "action": "added Erin Walsh as Customer",
+      "createdAt": "2026-10-13T10:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "workspaceId": 1,
+      "userId": 5,
+      "action": "commented on “Two-factor authentication”",
+      "createdAt": "2026-10-19T10:00:00.000Z"
+    },
+    {
+      "id": 7,
+      "workspaceId": 2,
+      "userId": 4,
+      "action": "created the workspace",
+      "createdAt": "2026-07-24T10:00:00.000Z"
+    },
+    {
+      "id": 8,
+      "workspaceId": 2,
+      "userId": 5,
+      "action": "submitted feedback “Folder colours”",
+      "createdAt": "2026-10-11T10:00:00.000Z"
+    }
+  ]
+}

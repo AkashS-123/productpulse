@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #0f766e;
+  --surface: 255 255 255;
+  --slate-50: 248 250 252; --slate-100: 241 245 249; --slate-200: 226 232 240; --slate-300: 203 213 225;
+  --slate-400: 148 163 184; --slate-500: 100 116 139; --slate-600: 71 85 105; --slate-700: 51 65 85;
+  --slate-800: 30 41 59; --slate-900: 15 23 42;
+}
+.dark {
+  color-scheme: dark;
+  --surface: 17 25 42;
+  --slate-50: 9 14 26; --slate-100: 24 34 54; --slate-200: 40 53 77; --slate-300: 58 74 102;
+  --slate-400: 112 128 152; --slate-500: 148 163 184; --slate-600: 176 189 207; --slate-700: 203 213 225;
+  --slate-800: 226 232 240; --slate-900: 241 245 249;
+}
+
+@layer base {
+  *, ::before, ::after { border-color: rgb(var(--slate-200)); }
+  html { transition: background-color .2s; }
+  body {
+    @apply bg-slate-50 font-sans text-slate-900 antialiased;
+    background-image:
+      radial-gradient(48rem 24rem at 100% -8%, color-mix(in srgb, var(--brand) 11%, transparent), transparent),
+      radial-gradient(36rem 20rem at -10% 110%, color-mix(in srgb, var(--brand) 7%, transparent), transparent);
+    background-attachment: fixed;
+  }
+  ::selection { background: color-mix(in srgb, var(--brand) 30%, transparent); }
+  :focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-thumb { background: rgb(var(--slate-300)); border-radius: 9999px; border: 2px solid transparent; background-clip: content-box; }
+}
+
+.bg-brand-soft { background: color-mix(in srgb, var(--brand) 12%, rgb(var(--surface))); }
+.brand-gradient { background: linear-gradient(135deg, var(--brand), color-mix(in srgb, var(--brand) 60%, #000)); }
+.field:focus { box-shadow: 0 0 0 3px color-mix(in srgb, var(--brand) 22%, transparent); }
+.dark .text-brand { color: color-mix(in srgb, var(--brand) 45%, white); }
+.dark .border-brand { border-color: color-mix(in srgb, var(--brand) 70%, white); }
+
+.stat { position: relative; overflow: hidden; }
+.stat::after { content: ''; position: absolute; right: -1.25rem; top: -1.25rem; width: 5rem; height: 5rem; border-radius: 9999px; background: color-mix(in srgb, var(--brand) 14%, transparent); }
+.hover-lift { transition: transform .15s, box-shadow .15s, border-color .15s; }
+.hover-lift:hover { transform: translateY(-2px); @apply shadow-lift; }
+
+.hero {
+  background:
+    radial-gradient(rgb(255 255 255 / .09) 1px, transparent 1px) 0 0 / 22px 22px,
+    linear-gradient(145deg, #0f766e 0%, #134e4a 55%, #0b1f2a 100%);
+}
+@keyframes pp-pop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+.pop { animation: pp-pop .18s ease-out; }
+@media (prefers-reduced-motion: reduce) { .pop { animation: none; } .hover-lift { transition: none; } }
+
+/* dark-mode fixes for coloured utility classes */
+.dark .bg-red-50 { background: rgb(239 68 68 / .12); } .dark .border-red-200 { border-color: rgb(248 113 113 / .3); }
+.dark .text-red-800, .dark .text-red-700 { color: #fca5a5; }
+.dark .bg-amber-50 { background: rgb(245 158 11 / .12); } .dark .border-amber-200 { border-color: rgb(251 191 36 / .3); }
+.dark .text-amber-900 { color: #fcd34d; }
+
+/* charts */
+.recharts-cartesian-axis-tick-value { fill: rgb(var(--slate-500)); }
+.recharts-cartesian-grid line { stroke: rgb(var(--slate-200)); }
+.recharts-tooltip-cursor { fill: rgb(var(--slate-100) / .6); }
+.recharts-default-tooltip { background: rgb(var(--surface)) !important; border-color: rgb(var(--slate-200)) !important; border-radius: 10px; }
+.recharts-tooltip-item, .recharts-tooltip-label { color: rgb(var(--slate-800)) !important; }
+.recharts-legend-item-text { color: rgb(var(--slate-700)) !important; }
